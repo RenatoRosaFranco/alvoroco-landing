@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Alvoroco</title>
+    <title>Alvoroco | <%= yield :title %></title>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style type='text/css'><%= yield :css %></style>
+    <script type='text/javascript'><%= yield :js %></script>
   </head>
-
-  <body>
+  <body class="<%= controller.controller_name %>" data-spy='scroll'>
     <%= yield %>
   </body>
 </html>
