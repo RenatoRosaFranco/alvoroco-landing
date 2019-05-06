@@ -14,4 +14,15 @@ Rails.application.routes.draw do
   root to: 'home#index'
   resources :newsletters, only: [:create, :destroy]
   resources :contacts, only: [:create]
+
+  # API
+  # @implemented
+  namespace :api, constraint: { subdomain: 'api'}, path: '/' do
+  	namespace :v1 do
+  		resources :newsletters
+  	end
+  	namespace :v2 do
+  		# some xml here
+  	end
+  end
 end
