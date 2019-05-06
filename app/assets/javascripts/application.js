@@ -18,6 +18,9 @@
 //= require turbolinks
 //= require_tree .
 $(function(){
+  particlesJS.load('particles-js', 'assets/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
 
 	$('[data-toggle="tooltip"]').tooltip();
 
