@@ -33,6 +33,8 @@ gem 'bootstrap3-rails'
 gem 'jquery-rails'
 gem 'rails_admin'
 gem 'alertifyjs-rails'
+gem 'letter_opener'
+gem 'responders'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

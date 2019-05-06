@@ -1,0 +1,19 @@
+<div class='header'>
+	<h1>Olá, Você se inscreveu com sucesso.</h1>
+</div>
+
+<div id='content'>
+	<p>Agora você terá todos os nossos conteudos na palma
+	de sua mão, tambem será notificado quando nossa nova
+	plataforma estiver no ar.
+	</p>
+	<p> Você pode remover seu e-mail do nosso serviço de newsletter
+	clickando no link a seguir :
+	<%= url_for(host: 'localhost:3000/newsletters', controller: 'newsletters',
+	action: "destroy",  token: @newsletter.token) %>
+	</p>
+</div>
+
+<div class="footer">
+	
+</div>
