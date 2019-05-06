@@ -19,11 +19,18 @@
 //= require turbolinks
 //= require_tree .
 $(function(){
-  particlesJS.load('particles-js', 'assets/particles.json', function() {
+	$('[data-toggle="tooltip"]').tooltip();
+
+  // Particles JS
+  particlesJS.load('particles-js', 'particles.json', function() {
     console.log('callback - particles.js config loaded');
   });
 
-	$('[data-toggle="tooltip"]').tooltip();
+  // Email autocomplete
+  $("#newsletter_email").emailautocomplete({
+    suggClass: 'custom-classname',
+    domains: []
+  });
 
 	// Set the date we're counting down to
 	var countDownDate = new Date("July 5, 2019 15:37:25").getTime();

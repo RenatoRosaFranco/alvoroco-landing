@@ -20,14 +20,14 @@ class Newsletter < ApplicationRecord
 		set_token
 		set_status(true)
 		set_signup_date
-		send_email(NewsletterMailer, :signup, self, :deliver_now)
+		# send_email(NewsletterMailer, :signup, self, :deliver_now)
 		save!
 	end
 
 	def cancel
 		remove_token
 		set_status(false)
-		send_email(NewsletterMailer, :cancel, self, :deliver_now)
+		# send_email(NewsletterMailer, :cancel, self, :deliver_now)
 		save!
 	end
 

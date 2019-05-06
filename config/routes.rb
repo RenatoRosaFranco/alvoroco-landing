@@ -3,7 +3,7 @@ Rails.application.routes.draw do
  
  # Authentication
  # @implemented
- devise_for :users
+ # devise_for :users
 
  	# Administration
  	# @implemented
