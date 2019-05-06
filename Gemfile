@@ -36,7 +36,7 @@ gem 'alertifyjs-rails'
 gem 'letter_opener'
 gem 'responders'
 gem 'particles-js-rails'
-
+gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

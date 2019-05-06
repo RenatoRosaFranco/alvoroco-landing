@@ -13,6 +13,7 @@
 //= require jquery
 //= require bootstrap
 //= require alertify
+//= require particles.js
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
