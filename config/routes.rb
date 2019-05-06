@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   # @implemented
   root to: 'home#index'
   resources :newsletters, only: [:create, :destroy]
+  resources :contacts, only: [:create]
 end
