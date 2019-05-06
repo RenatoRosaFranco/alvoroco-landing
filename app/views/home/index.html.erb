@@ -1,0 +1,42 @@
+<% provide :title, 'Home' %>
+
+<section class="jumbotron">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12"> 
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<h2>EM CONSTRUÇÃO</h2>
+					<ul class="list-unstyled list-inline">
+						<li>
+							<h2>55</h2>
+							<span>Dias</span>
+						</li>
+						<li>
+						  <h2>55</h2>
+							<span>Horas</span>
+						</li>
+						<li>
+							<h2>55</h2>
+							<span>Minutos</span>
+						</li>
+						<li>
+							<h2>55</h2>
+							<span>Segundos</span>
+						</li>
+					</ul>
+
+					<div class="col-md-12">
+						<p>Somos uma produtora de filmes indepente.</p>
+
+						<%= form_for(:newsletter) do |f| %>
+							<div class="field col-md-8 col-md-offset-2">
+								<%= f.email_field :email, class: 'form-control', required: 'required',
+								placeholder: 'Digite o e-mail', autocomplete: 'off' %>
+							</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
