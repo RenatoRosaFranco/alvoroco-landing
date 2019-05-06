@@ -1,4 +1,12 @@
+# frozen_string_literal: true
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+ 
+ 	# Administration
+ 	# @implemented
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+  # Application
+  # @implemented
   root to: 'home#index'
+  resources :newsletters, only: [:create, :destroy]
 end

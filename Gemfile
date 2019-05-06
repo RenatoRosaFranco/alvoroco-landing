@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap3-rails'
 gem 'jquery-rails'
 gem 'rails_admin'
+gem 'alertifyjs-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
