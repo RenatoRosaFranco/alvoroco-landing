@@ -1,42 +1,184 @@
 <% provide :title, 'Home' %>
 
-<section class="jumbotron">
+<div id='nav-menu'>
+	<ul class="list-unstyled">
+		<li>
+			<%= link_to '', 'data-toggle': 'tooltip', title: 'HOME' do %>
+				<i class="fas fa-circle"></i>
+			<% end %>
+		</li>
+		<li>
+			<%= link_to '', 'data-toggle': 'tooltip', title: 'FILMES' do %>
+				<i class="fas fa-circle"></i>
+			<% end %>
+		</li>
+		<li>
+			<%= link_to '', 'data-toggle': 'tooltip', title: 'PRODUTORA' do %>
+				<i class="fas fa-circle"></i>
+			<% end %>
+		</li>
+		<li>
+			<%= link_to '', 'data-toggle': 'tooltip', title: 'CONTATO' do %>
+				<i class="fas fa-circle"></i>
+			<% end %>
+		</li>
+	</ul>
+</div>
+
+<header>
+	<nav class="navbar navbar-default">
+  <div class="container container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Alvoroço Filmes</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>	
+</header>
+
+<section class="jumbotron" id='comming-soon'>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12"> 
 				<div class="col-md-8 col-md-offset-2 text-center">
-					<h2>EM CONSTRUÇÃO</h2>
+					<h2 class='brand'>EM CONSTRUÇÃO</h2>
+					<br>
+				
+				<div class='col-md-12' style='margin-bottom: 30px;'>
 					<ul class="list-unstyled list-inline">
 						<li>
-							<h2>55</h2>
-							<span>Dias</span>
+							<div class='Counter CounterDays'>
+								<h2></h2>
+								<span>Dias</span>
+							</div>
 						</li>
 						<li>
-						  <h2>55</h2>
-							<span>Horas</span>
+							<div class='Counter CounterHours'>
+						  	<h2></h2>
+								<span>Horas</span>
+							</div>
 						</li>
 						<li>
-							<h2>55</h2>
-							<span>Minutos</span>
+							<div class='Counter CounterMinutes'>
+								<h2></h2>
+								<span>Minutos</span>
+							</div>
 						</li>
 						<li>
-							<h2>55</h2>
-							<span>Segundos</span>
+							<div class='Counter counterSeconds'>
+								<h2></h2>
+								<span>Segundos</span>
+							</div>
 						</li>
 					</ul>
+				 </div>
 
-					<div class="col-md-12">
-						<p>Somos uma produtora de filmes indepente.</p>
-
+					<div class="col-md-12" style='margin-top: 0px;'>
+						<p>Somos uma produtora de filmes indepente.</p>	
+						
+						<div style='margin-top: 30px;'>
 						<%= form_for(:newsletter) do |f| %>
 							<div class="field col-md-8 col-md-offset-2">
 								<%= f.email_field :email, class: 'form-control', required: 'required',
 								placeholder: 'Digite o e-mail', autocomplete: 'off' %>
+								<%= f.submit 'Inscreva-me', class: 'btn btn-primary btn-lg btn-alv' %>
 							</div>
 						<% end %>
+						</div>
+					</div>
+
+					<div id='social' class="col-md-12" style='margin-top: 10px;'>
+						<ul class="list-unstyled list-inline">
+							<li>
+								<%= link_to 'http://bit.ly/2Ww2xEc', target: '_blank', 
+								'data-toggle': 'tooltip', title: 'Facebook' do %>
+									<i class="fab fa-facebook-f"></i>
+								<% end %>
+							</li>
+							<li>
+								<%= link_to 'http://bit.ly/2Vfjp5s', target: '_blank',
+								'data-toggle': 'tooltip', title: 'Twitter' do %>
+									<i class="fab fa-twitter"></i>
+								<% end %>
+							</li>
+							<li>
+								<%= link_to 'http://bit.ly/2PR6n8A', target: '_blank',
+								'data-toggle': 'tooltip', title: 'Instagram' do %>
+									<i class="fab fa-instagram"></i>
+								<% end %>
+							</li>
+							<li>
+								<%= link_to 'http://bit.ly/2H4I0S3', target: '_blank',
+								'data-toggle': 'tooltip', title: 'Youtube' do %>
+									<i class="fab fa-youtube"></i>
+								<% end %>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+</section>
+
+<section id='movies'>
+	<div class='container'>
+		<div class='row'>
+			<div class="col-md-12 text-center">
+				<h1>NOSSOS FILMES</h1>
+				<p>Enquanto estamos trabalhando em nossa nova plataforma<br> acompanhe nossos filmes.</p>
+				<br>
+			</div>
+			
+			<div id="menu" class="text-center col-md-12">
+				<div class='col-md-5 col-md-offset-4'>
+					<ul class="nav nav-pills">
+					  <li role="presentation"><a href="#">LONGAS</a></li>
+					  <li role="presentation"><a href="#">CURTAS</a></li>
+					  <li role="presentation"><a href="#">MÉDIAS</a></li>
+					  <li role="presentation"><a href="#">INTERNET</a></li>
+					</ul>	
+				</div>
+			</div><br>
+			<br>
+			
+			<div id='longas' style='margin-top: 50px;'>
+				<div class="movie col-md-3">
+					<iframe width="200" height="200" src="https://www.youtube.com/embed/yXYaIC_PAAc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="movie col-md-3">
+					<iframe width="200" height="200" src="https://www.youtube.com/embed/zykLmjIDrNw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="movie col-md-3">
+					<iframe width="200" height="200" src="https://www.youtube.com/embed/yXYaIC_PAAc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="movie col-md-3">
+					<iframe width="200" height="200" src="https://www.youtube.com/embed/yXYaIC_PAAc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="movie col-md-3">
+					<iframe width="200" height="200" src="https://www.youtube.com/embed/yXYaIC_PAAc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+			<div id="curtas">
+				
+			</div>
+
 		</div>
 	</div>
 </section>

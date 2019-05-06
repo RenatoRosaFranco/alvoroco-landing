@@ -14,3 +14,151 @@
  *= require_self
  */
  @import 'bootstrap';
+
+ body {
+ 	font-size: 16px;
+  background-color: #000;
+ }
+ 
+ #nav-menu {
+	position: fixed;
+	right: 60px;
+	z-index: 999;
+	top: 200px;
+
+	ul {
+	 position: relative;
+	 li {
+	 	position: relative;
+	 	margin-top: 20px;
+	 	margin-bottom: 20px;
+	 }
+	}
+
+	i {
+	 position: relative;
+	 font-size: 25px;
+	 color: #FFF;
+	 transition: 0.5s;
+	 &.over, &:hover {
+		position: relative;
+		color: red;
+		transition: 0.5s;
+	 }
+	}
+ }
+
+ .navbar-default {
+ 	position: relative;
+ 	background-color: #000;
+ 	border: 1px #000;
+ 	border-radius: 0px;
+
+ 	.navbar-brand {
+ 	 position: relative;
+ 	 color: red;
+ 	 font-weight: bold;
+ 	 text-transform: uppercase;
+ 	 font-size: 26px;
+ 	}
+ }
+
+ #comming-soon {
+ 	position: relative;
+ 	margin-top: -20px;
+ 	font-size: 16px;
+	background-color: #000;
+	color: #FFF;
+	
+	.brand {
+	 position: relative;
+	 color: red;
+	}
+
+	h2 {
+	 font-size: 45px;
+	 font-weight: bold;
+	}
+
+ 	.Counter {
+ 	 h2 {
+ 	 	position: relative;
+ 	 	font-weight: normal;
+ 	 	font-size: 55px;
+ 	 }
+ 	}
+
+	form {
+		position: relative;
+		
+		.btn-alv {
+			margin-top: -50px;
+    	z-index: 9;
+    	position: absolute;
+    	margin-left: 81px;
+    	background-color: red;
+    	border-radius: 25px;
+    	border: 1px solid red;
+		}
+
+		input[type=email]{
+		 background-color: #000;
+		 border: 2px solid #EEE;
+		 position: relative;
+		 border-radius: 25px;
+		 height: 54px;
+		 text-transform: uppercase;	
+		 &::-webkit-input-placeholder {
+			position: relative;
+			color: #999;
+			transition: 0.5s;
+		 }
+
+		 &.focus, &:focus {
+		 	color: #FFF;
+		 	transition: 0.5s;
+		 	&::-webkit-input-placeholder {
+			 position: relative;
+			 color: #FFF;
+			 transition: 0.5s;
+		 	}
+		 }
+		}
+	}
+
+ 	i {
+ 	 margin-top: 30px;
+ 	 position: relative;
+ 	 font-size: 22px;
+ 	 transition: 0.5s;
+ 	 color: #FFF;
+ 	 &.over, &:hover {
+ 	  position: relative;
+ 	  cursor: pointer;
+ 	  transition: 0.5s;
+ 	  font-size: 26px;
+ 	  color: red;
+ 	 }	
+ 	}
+
+ 	#social {
+ 	 ul {
+ 	 	li {
+ 	 	 margin-left: 10px;
+ 	 	 margin-right: 10px;
+ 	 	}
+ 	 }
+ 	}
+ }
+
+ #movies {
+ 	h1 {
+ 	 position: relative;
+ 	 color: red;
+ 	}
+ 	p {
+ 	 position: relative;
+ 	 font-size: 18px;
+ 	 color: #FFF;
+ 	}
+ }
